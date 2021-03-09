@@ -1,0 +1,78 @@
+body {
+    background-color: #292C34 !important;
+    font-family: 'Asap', sans-serif !important;
+}
+
+header {
+    padding: 20px;
+    background-color: whitesmoke;
+    margin-bottom: 0;
+}
+
+header>h1 {
+    color: #24272E;
+    font-weight: bold;
+}
+
+.score-board {
+    width: 200px;
+    margin: 20px auto;
+    border: 3px solid whitesmoke;
+    border-radius: 4px;
+    color: whitesmoke;
+    font-size: 46px;
+    padding: 10px 20px;
+    position: relative;
+}
+
+.badge {
+    background-color: #E2584D;
+    padding: 2px 18px;
+    font-size: 14px !important;
+}
+
+#user-label {
+    position: absolute;
+    top: 30px;
+    left: -25px;
+}
+
+#comp-label {
+    position: absolute;
+    top: 30px;
+    right: -30px;
+}
+
+.result {
+    font-size: 40px;
+    color: whitesmoke;
+    font-weight: bold;
+}
+
+.choices {
+    margin-top: 50px;
+}
+.choice {
+    display: inline-block;
+    border: 4px solid whitesmoke;
+    border-radius: 50%;
+    padding: 20px;
+    margin: 0 20px;
+    transition: all 0.3s ease;
+}
+
+.choice:hover {
+    background-color: #24272E;
+    cursor: pointer;
+}
+
+img {
+    width: 100px;
+    height: 100px;
+}
+#action-message {
+    color: whitesmoke;
+    margin-top: 20px;
+    font-size: 20px;
+    font-weight: bold;
+}

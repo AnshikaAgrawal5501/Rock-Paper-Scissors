@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Rock Paper Scissors Game</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Asap&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <script src="https://use.fontawesome.com/releases/v5.15.2/js/all.js" data-auto-replace-svg="nest"></script>        
+    </head>
+
+    <body>
+        
+        <header class="text-center">
+            <h1>Rock Paper Scissors</h1>
+        </header>
+
+        <div class="score-board text-center">
+            <div id="user-label" class="badge">User</div>
+            <div id="comp-label" class="badge">Comp</div>
+            <span id="user-score">0</span id="comp-score">:<span>0</span>
+        </div>
+
+        <div class="result text-center">
+            <p>Paper covers rock. You Win!</p>
+        </div>
+
+        <div class="choices text-center">
+            <div class="choice" id="rock">
+                <img src="img/rock.png">
+            </div>
+
+            <div class="choice" id="paper">
+                <img src="img/paper.png">
+            </div>
+
+            <div class="choice" id="scissors">
+                <img src="img/scissor.png">
+            </div>
+        </div>
+
+        <p id="action-message" class="text-center">Make your move.</p>
+
+        <script src="script.js"></script>
+    </body>
+</html>
