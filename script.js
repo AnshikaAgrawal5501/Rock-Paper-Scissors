@@ -4,9 +4,9 @@ const userScore_span = document.getElementById("user-score");
 const compScore_span = document.getElementById("comp-score");
 const scoreBoard_div = document.querySelector(".score-board");
 const result_p = document.querySelector(".result>p");
-const rock_div = document.getElementById("rock");
-const paper_div = document.getElementById("paper");
-const scissor_div = document.getElementById("scissors");
+const rock_div = document.getElementById("r");
+const paper_div = document.getElementById("p");
+const scissor_div = document.getElementById("s");
 
 function getComputerChoice() {
 
@@ -28,23 +28,46 @@ function letterToWord (letter) {
 function win(userChoice,compChoice) {
     userScore++;
     userScore_span.innerHTML=userScore;
+
     const smallUserWord = "(User)".fontsize(3).sub();
     const smallCompWord = "(Comp)".fontsize(3).sub();
-    result_p.innerHTML = `${letterToWord(userChoice)}${smallUserWord} beates ${letterToWord(compChoice)}${smallCompWord}. You Win!`
+
+    const userChoice_div = document.getElementById(userChoice);
+    result_p.innerHTML = `${letterToWord(userChoice)}${smallUserWord} beates ${letterToWord(compChoice)}${smallCompWord}. You Win! &#128293;`
+    
+    userChoice_div.classList.add("green-glow");
+    setTimeout(function() {
+        userChoice_div.classList.remove("green-glow")
+    }, 300);
 }
 
 function lose(userChoice,compChoice) {
     compScore++;
     compScore_span.innerHTML=compScore;
+
     const smallUserWord = "(User)".fontsize(3).sub();
     const smallCompWord = "(Comp)".fontsize(3).sub();
-    result_p.innerHTML = `${letterToWord(userChoice)}${smallUserWord} looses to ${letterToWord(compChoice)}${smallCompWord}. You Loose...`
+
+    const userChoice_div = document.getElementById(userChoice);
+    result_p.innerHTML = `${letterToWord(userChoice)}${smallUserWord} looses to ${letterToWord(compChoice)}${smallCompWord}. You Loose... &#128078;`
+
+    userChoice_div.classList.add("red-glow");
+    setTimeout(function() {
+        userChoice_div.classList.remove("red-glow")
+    }, 300);
 }
 
 function draw(userChoice,compChoice) {
     const smallUserWord = "(User)".fontsize(3).sub();
     const smallCompWord = "(Comp)".fontsize(3).sub();
-    result_p.innerHTML = `${letterToWord(userChoice)}${smallUserWord} equals ${letterToWord(compChoice)}${smallCompWord}. It's a Draw.`
+
+    const userChoice_div = document.getElementById(userChoice);
+    result_p.innerHTML = `${letterToWord(userChoice)}${smallUserWord} equals ${letterToWord(compChoice)}${smallCompWord}. It's a Draw. &#129296;`
+    
+    userChoice_div.classList.add("gray-glow");
+    setTimeout(function() {
+        userChoice_div.classList.remove("gray-glow")
+    }, 300);
 }
 
 function game(userChoice) {

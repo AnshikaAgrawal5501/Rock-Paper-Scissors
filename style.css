@@ -67,17 +67,17 @@ header>h1 {
 }
 
 .green-glow {
-    border: 4px solid #4dcc7d;
+    border: 4px solid #4dcc7d !important;
     box-shadow: 0 0 10px #31b43a;
 }
 
 .red-glow {
-    border: 4px solid #fc121b;
+    border: 4px solid #fc121b !important;
     box-shadow: 0 0 10px #d01115;
 }
 
 .gray-glow {
-    border: 4px solid #464647;
+    border: 4px solid #464647 !important;
     box-shadow: 0 0 10px #25292b;
 }
 
